@@ -15,6 +15,20 @@
 		115DCAF4222A8E73003EE7A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115DCAF2222A8E73003EE7A4 /* LaunchScreen.storyboard */; };
 		115DCAFF222A8E73003EE7A4 /* FYPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCAFE222A8E73003EE7A4 /* FYPTests.swift */; };
 		115DCB0A222A8E73003EE7A4 /* FYPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB09222A8E73003EE7A4 /* FYPUITests.swift */; };
+		115DCB18222A9012003EE7A4 /* FixtureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB17222A9012003EE7A4 /* FixtureTableViewCell.swift */; };
+		115DCB1A222A906C003EE7A4 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB19222A906C003EE7A4 /* HomeTableViewController.swift */; };
+		115DCB1C222A916B003EE7A4 /* FixtureItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB1B222A916B003EE7A4 /* FixtureItem.swift */; };
+		115DCB1E222A985A003EE7A4 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB1D222A985A003EE7A4 /* EventTableViewCell.swift */; };
+		115DCB20222A988E003EE7A4 /* FixtureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB1F222A988E003EE7A4 /* FixtureViewController.swift */; };
+		115DCB22222AA139003EE7A4 /* EventItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB21222AA139003EE7A4 /* EventItem.swift */; };
+		115DCB24222AAAE3003EE7A4 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB23222AAAE3003EE7A4 /* EventViewController.swift */; };
+		115DCB26222ABA70003EE7A4 /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB25222ABA70003EE7A4 /* TicketsViewController.swift */; };
+		115DCB28222AC4B6003EE7A4 /* PlayersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB27222AC4B6003EE7A4 /* PlayersTableViewController.swift */; };
+		115DCB2A222AC730003EE7A4 /* PlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB29222AC730003EE7A4 /* PlayerItem.swift */; };
+		115DCB2C222AC86F003EE7A4 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB2B222AC86F003EE7A4 /* PlayerTableViewCell.swift */; };
+		115DCB2E222ADC3A003EE7A4 /* BingoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB2D222ADC3A003EE7A4 /* BingoViewController.swift */; };
+		115DCB30222ADD17003EE7A4 /* GameEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB2F222ADD17003EE7A4 /* GameEvent.swift */; };
+		115DCB34222ADEF8003EE7A4 /* BingoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB33222ADEF8003EE7A4 /* BingoCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +63,20 @@
 		115DCB05222A8E73003EE7A4 /* FYPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FYPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		115DCB09222A8E73003EE7A4 /* FYPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FYPUITests.swift; sourceTree = "<group>"; };
 		115DCB0B222A8E73003EE7A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		115DCB17222A9012003EE7A4 /* FixtureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureTableViewCell.swift; sourceTree = "<group>"; };
+		115DCB19222A906C003EE7A4 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		115DCB1B222A916B003EE7A4 /* FixtureItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureItem.swift; sourceTree = "<group>"; };
+		115DCB1D222A985A003EE7A4 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		115DCB1F222A988E003EE7A4 /* FixtureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureViewController.swift; sourceTree = "<group>"; };
+		115DCB21222AA139003EE7A4 /* EventItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventItem.swift; sourceTree = "<group>"; };
+		115DCB23222AAAE3003EE7A4 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		115DCB25222ABA70003EE7A4 /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
+		115DCB27222AC4B6003EE7A4 /* PlayersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersTableViewController.swift; sourceTree = "<group>"; };
+		115DCB29222AC730003EE7A4 /* PlayerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerItem.swift; sourceTree = "<group>"; };
+		115DCB2B222AC86F003EE7A4 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
+		115DCB2D222ADC3A003EE7A4 /* BingoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoViewController.swift; sourceTree = "<group>"; };
+		115DCB2F222ADD17003EE7A4 /* GameEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEvent.swift; sourceTree = "<group>"; };
+		115DCB33222ADEF8003EE7A4 /* BingoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +127,8 @@
 		115DCAE5222A8E72003EE7A4 /* FYP */ = {
 			isa = PBXGroup;
 			children = (
+				115DCB32222ADEC2003EE7A4 /* Table Cells */,
+				115DCB31222ADEA0003EE7A4 /* Data Models */,
 				115DCAE6222A8E72003EE7A4 /* AppDelegate.swift */,
 				115DCAE8222A8E72003EE7A4 /* ViewController.swift */,
 				115DCAEA222A8E72003EE7A4 /* Main.storyboard */,
@@ -106,6 +136,13 @@
 				115DCAF2222A8E73003EE7A4 /* LaunchScreen.storyboard */,
 				115DCAF5222A8E73003EE7A4 /* Info.plist */,
 				115DCAED222A8E72003EE7A4 /* FYP.xcdatamodeld */,
+				115DCB19222A906C003EE7A4 /* HomeTableViewController.swift */,
+				115DCB1F222A988E003EE7A4 /* FixtureViewController.swift */,
+				115DCB23222AAAE3003EE7A4 /* EventViewController.swift */,
+				115DCB25222ABA70003EE7A4 /* TicketsViewController.swift */,
+				115DCB27222AC4B6003EE7A4 /* PlayersTableViewController.swift */,
+				115DCB2D222ADC3A003EE7A4 /* BingoViewController.swift */,
+				115DCB33222ADEF8003EE7A4 /* BingoCollectionViewCell.swift */,
 			);
 			path = FYP;
 			sourceTree = "<group>";
@@ -126,6 +163,27 @@
 				115DCB0B222A8E73003EE7A4 /* Info.plist */,
 			);
 			path = FYPUITests;
+			sourceTree = "<group>";
+		};
+		115DCB31222ADEA0003EE7A4 /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				115DCB1B222A916B003EE7A4 /* FixtureItem.swift */,
+				115DCB21222AA139003EE7A4 /* EventItem.swift */,
+				115DCB29222AC730003EE7A4 /* PlayerItem.swift */,
+				115DCB2F222ADD17003EE7A4 /* GameEvent.swift */,
+			);
+			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		115DCB32222ADEC2003EE7A4 /* Table Cells */ = {
+			isa = PBXGroup;
+			children = (
+				115DCB2B222AC86F003EE7A4 /* PlayerTableViewCell.swift */,
+				115DCB1D222A985A003EE7A4 /* EventTableViewCell.swift */,
+				115DCB17222A9012003EE7A4 /* FixtureTableViewCell.swift */,
+			);
+			path = "Table Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +317,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				115DCB34222ADEF8003EE7A4 /* BingoCollectionViewCell.swift in Sources */,
+				115DCB2E222ADC3A003EE7A4 /* BingoViewController.swift in Sources */,
+				115DCB2C222AC86F003EE7A4 /* PlayerTableViewCell.swift in Sources */,
 				115DCAE9222A8E72003EE7A4 /* ViewController.swift in Sources */,
+				115DCB2A222AC730003EE7A4 /* PlayerItem.swift in Sources */,
 				115DCAEF222A8E72003EE7A4 /* FYP.xcdatamodeld in Sources */,
 				115DCAE7222A8E72003EE7A4 /* AppDelegate.swift in Sources */,
+				115DCB30222ADD17003EE7A4 /* GameEvent.swift in Sources */,
+				115DCB18222A9012003EE7A4 /* FixtureTableViewCell.swift in Sources */,
+				115DCB26222ABA70003EE7A4 /* TicketsViewController.swift in Sources */,
+				115DCB20222A988E003EE7A4 /* FixtureViewController.swift in Sources */,
+				115DCB24222AAAE3003EE7A4 /* EventViewController.swift in Sources */,
+				115DCB1E222A985A003EE7A4 /* EventTableViewCell.swift in Sources */,
+				115DCB28222AC4B6003EE7A4 /* PlayersTableViewController.swift in Sources */,
+				115DCB1C222A916B003EE7A4 /* FixtureItem.swift in Sources */,
+				115DCB1A222A906C003EE7A4 /* HomeTableViewController.swift in Sources */,
+				115DCB22222AA139003EE7A4 /* EventItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
