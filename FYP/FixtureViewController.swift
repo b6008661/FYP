@@ -14,6 +14,10 @@ class FixtureViewController: UIViewController, UITableViewDataSource, UITableVie
     
     var events: [EventItem] = []
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var homeTeamImg: UIButton!
+    @IBOutlet weak var awayTeamImg: UIButton!
+    
+    
     
     private func loadEvents() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -58,7 +62,8 @@ class FixtureViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.dataSource = self
         tableView.delegate = self
         loadEvents()
-        
+        homeTeamImg.setImage(UIImage(named: "Nottingham Panthers"), for: .normal)
+        awayTeamImg.setImage(UIImage(named: "Sheffield Steelers"), for: .normal)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Event")

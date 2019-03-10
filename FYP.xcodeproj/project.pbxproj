@@ -34,7 +34,8 @@
 		1165DC3A22304ACC003D5F6B /* AdminFixtureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1165DC3922304ACC003D5F6B /* AdminFixtureViewController.swift */; };
 		1165DC3D22351A11003D5F6B /* FYP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1165DC3B22351A11003D5F6B /* FYP.xcdatamodeld */; };
 		1165DC3F22352029003D5F6B /* Ticket50Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1165DC3E22352029003D5F6B /* Ticket50Item.swift */; };
-		1165DC4122354A89003D5F6B /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1165DC4022354A89003D5F6B /* AddEventViewController.swift */; };
+		1165DC4322354F04003D5F6B /* AddPenaltyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1165DC4222354F04003D5F6B /* AddPenaltyViewController.swift */; };
+		1165DC45223555DE003D5F6B /* AddGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1165DC44223555DE003D5F6B /* AddGoalViewController.swift */; };
 		11AB8FBB223007F00043E6F4 /* AdminFixturesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AB8FBA223007F00043E6F4 /* AdminFixturesTableViewController.swift */; };
 		11AB8FBF22300C5D0043E6F4 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AB8FBE22300C5D0043E6F4 /* TeamTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -90,7 +91,8 @@
 		1165DC3922304ACC003D5F6B /* AdminFixtureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminFixtureViewController.swift; sourceTree = "<group>"; };
 		1165DC3C22351A11003D5F6B /* FYP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FYP.xcdatamodel; sourceTree = "<group>"; };
 		1165DC3E22352029003D5F6B /* Ticket50Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket50Item.swift; sourceTree = "<group>"; };
-		1165DC4022354A89003D5F6B /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		1165DC4222354F04003D5F6B /* AddPenaltyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPenaltyViewController.swift; sourceTree = "<group>"; };
+		1165DC44223555DE003D5F6B /* AddGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewController.swift; sourceTree = "<group>"; };
 		11AB8FB7222F06E00043E6F4 /* FYP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FYP.entitlements; sourceTree = "<group>"; };
 		11AB8FBA223007F00043E6F4 /* AdminFixturesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminFixturesTableViewController.swift; sourceTree = "<group>"; };
 		11AB8FBE22300C5D0043E6F4 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
@@ -215,7 +217,8 @@
 				1165DC3322303764003D5F6B /* AddFixtureViewController.swift */,
 				1165DC3522304142003D5F6B /* AddTeamViewController.swift */,
 				1165DC3922304ACC003D5F6B /* AdminFixtureViewController.swift */,
-				1165DC4022354A89003D5F6B /* AddEventViewController.swift */,
+				1165DC4222354F04003D5F6B /* AddPenaltyViewController.swift */,
+				1165DC44223555DE003D5F6B /* AddGoalViewController.swift */,
 			);
 			path = Admin;
 			sourceTree = "<group>";
@@ -357,7 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				115DCB34222ADEF8003EE7A4 /* BingoCollectionViewCell.swift in Sources */,
-				1165DC4122354A89003D5F6B /* AddEventViewController.swift in Sources */,
+				1165DC45223555DE003D5F6B /* AddGoalViewController.swift in Sources */,
 				115DCB2E222ADC3A003EE7A4 /* BingoViewController.swift in Sources */,
 				1165DC30223011FB003D5F6B /* TeamsTableViewController.swift in Sources */,
 				1165DC322230120F003D5F6B /* TeamItem.swift in Sources */,
@@ -381,6 +384,7 @@
 				115DCB1C222A916B003EE7A4 /* FixtureItem.swift in Sources */,
 				115DCB1A222A906C003EE7A4 /* HomeTableViewController.swift in Sources */,
 				115DCB22222AA139003EE7A4 /* EventItem.swift in Sources */,
+				1165DC4322354F04003D5F6B /* AddPenaltyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

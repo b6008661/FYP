@@ -122,7 +122,6 @@ class AdminFixturesTableViewController: UITableViewController {
     @IBAction func unwindToFixtureList(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.source as? AddFixtureViewController, let fixture = sourceViewController.fixture {
             
-            // Add a new meal.
             let newIndexPath = IndexPath(row: fixtures.count, section: 0)
             
             fixtures.append(fixture)

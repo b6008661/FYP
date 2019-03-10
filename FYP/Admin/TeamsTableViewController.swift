@@ -121,7 +121,6 @@ class TeamsTableViewController: UITableViewController {
     @IBAction func unwindToFixtureList(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.source as? AddTeamViewController, let team = sourceViewController.team {
             
-            // Add a new meal.
             let newIndexPath = IndexPath(row: teams.count, section: 0)
             
             teams.append(team)

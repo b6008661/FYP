@@ -18,14 +18,16 @@ class AdminFixtureViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var awayTeam: UIImageView!
     @IBOutlet weak var dateLbl: UILabel!
     @IBOutlet weak var timelbl: UILabel!
-    @IBOutlet weak var addEventButton: UIButton!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var finishButton: UIButton!
+    @IBOutlet weak var addPenaltyButton: UIButton!
+    @IBOutlet weak var addGoalButton: UIButton!
     
     @IBAction func start(_ sender: UIButton) {
-        addEventButton.isEnabled = true
         finishButton.isEnabled = true
         startButton.isEnabled = false
+        addPenaltyButton.isEnabled = true
+        addGoalButton.isEnabled = true
     }
     
     var fixture: FixtureItem? = nil
@@ -82,5 +84,52 @@ class AdminFixtureViewController: UIViewController, UITableViewDelegate, UITable
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func unwindToEventList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? AddGoalViewController, let event = sourceViewController.event {
+            print(event.name)
+            let newIndexPath = IndexPath(row: events.count, section: 0)
+            events.append(event)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+            
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            let entity = NSEntityDescription.entity(forEntityName: "Event", in: context)
+            let newEvent = NSManagedObject(entity: entity!, insertInto: context)
+            newEvent.setValue(event.type, forKey: "type")
+            newEvent.setValue(event.name, forKey: "name")
+            newEvent.setValue(event.player, forKey: "player")
+            newEvent.setValue(event.team, forKey: "team")
+            newEvent.setValue(event.time, forKey: "time")
+            newEvent.setValue(event.period, forKey: "period")
+            do {
+                try context.save()
+            } catch {
+                print("Failed saving")
+            }
+        }
+        if let sourceViewController = sender.source as? AddPenaltyViewController, let event = sourceViewController.event {
+            print(event.name)
+            let newIndexPath = IndexPath(row: events.count, section: 0)
+            events.append(event)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+            
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            let entity = NSEntityDescription.entity(forEntityName: "Event", in: context)
+            let newEvent = NSManagedObject(entity: entity!, insertInto: context)
+            newEvent.setValue(event.type, forKey: "type")
+            newEvent.setValue(event.name, forKey: "name")
+            newEvent.setValue(event.player, forKey: "player")
+            newEvent.setValue(event.team, forKey: "team")
+            newEvent.setValue(event.time, forKey: "time")
+            newEvent.setValue(event.period, forKey: "period")
+            do {
+                try context.save()
+            } catch {
+                print("Failed saving")
+            }
+        }
+    }
 
 }
