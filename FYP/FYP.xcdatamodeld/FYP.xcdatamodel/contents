@@ -26,10 +26,25 @@
         <attribute name="number" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="team" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Team" representedClassName="Team" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Ticket50" representedClassName="Ticket50" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="owner" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="TicketSOHB" representedClassName="TicketSOHB" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="owner" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="player" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Fixture" positionX="-63" positionY="-18" width="128" height="105"/>
         <element name="Event" positionX="-54" positionY="18" width="128" height="135"/>
-        <element name="Player" positionX="-36" positionY="63" width="128" height="120"/>
+        <element name="Fixture" positionX="-63" positionY="-18" width="128" height="105"/>
         <element name="GameEvent" positionX="-18" positionY="90" width="128" height="90"/>
+        <element name="Player" positionX="-36" positionY="63" width="128" height="120"/>
+        <element name="Team" positionX="-36" positionY="63" width="128" height="60"/>
+        <element name="Ticket50" positionX="-27" positionY="72" width="128" height="75"/>
+        <element name="TicketSOHB" positionX="-18" positionY="81" width="128" height="90"/>
     </elements>
 </model>

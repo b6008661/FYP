@@ -10,7 +10,6 @@
 		115DCAE7222A8E72003EE7A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCAE6222A8E72003EE7A4 /* AppDelegate.swift */; };
 		115DCAE9222A8E72003EE7A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCAE8222A8E72003EE7A4 /* ViewController.swift */; };
 		115DCAEC222A8E72003EE7A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115DCAEA222A8E72003EE7A4 /* Main.storyboard */; };
-		115DCAEF222A8E72003EE7A4 /* FYP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 115DCAED222A8E72003EE7A4 /* FYP.xcdatamodeld */; };
 		115DCAF1222A8E73003EE7A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 115DCAF0222A8E73003EE7A4 /* Assets.xcassets */; };
 		115DCAF4222A8E73003EE7A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115DCAF2222A8E73003EE7A4 /* LaunchScreen.storyboard */; };
 		115DCAFF222A8E73003EE7A4 /* FYPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCAFE222A8E73003EE7A4 /* FYPTests.swift */; };
@@ -22,13 +21,22 @@
 		115DCB20222A988E003EE7A4 /* FixtureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB1F222A988E003EE7A4 /* FixtureViewController.swift */; };
 		115DCB22222AA139003EE7A4 /* EventItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB21222AA139003EE7A4 /* EventItem.swift */; };
 		115DCB24222AAAE3003EE7A4 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB23222AAAE3003EE7A4 /* EventViewController.swift */; };
-		115DCB26222ABA70003EE7A4 /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB25222ABA70003EE7A4 /* TicketsViewController.swift */; };
 		115DCB28222AC4B6003EE7A4 /* PlayersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB27222AC4B6003EE7A4 /* PlayersTableViewController.swift */; };
 		115DCB2A222AC730003EE7A4 /* PlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB29222AC730003EE7A4 /* PlayerItem.swift */; };
 		115DCB2C222AC86F003EE7A4 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB2B222AC86F003EE7A4 /* PlayerTableViewCell.swift */; };
 		115DCB2E222ADC3A003EE7A4 /* BingoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB2D222ADC3A003EE7A4 /* BingoViewController.swift */; };
 		115DCB30222ADD17003EE7A4 /* GameEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB2F222ADD17003EE7A4 /* GameEvent.swift */; };
 		115DCB34222ADEF8003EE7A4 /* BingoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB33222ADEF8003EE7A4 /* BingoCollectionViewCell.swift */; };
+		1165DC30223011FB003D5F6B /* TeamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1165DC2F223011FB003D5F6B /* TeamsTableViewController.swift */; };
+		1165DC322230120F003D5F6B /* TeamItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1165DC312230120F003D5F6B /* TeamItem.swift */; };
+		1165DC3422303764003D5F6B /* AddFixtureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1165DC3322303764003D5F6B /* AddFixtureViewController.swift */; };
+		1165DC3622304142003D5F6B /* AddTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1165DC3522304142003D5F6B /* AddTeamViewController.swift */; };
+		1165DC3A22304ACC003D5F6B /* AdminFixtureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1165DC3922304ACC003D5F6B /* AdminFixtureViewController.swift */; };
+		1165DC3D22351A11003D5F6B /* FYP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1165DC3B22351A11003D5F6B /* FYP.xcdatamodeld */; };
+		1165DC3F22352029003D5F6B /* Ticket50Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1165DC3E22352029003D5F6B /* Ticket50Item.swift */; };
+		1165DC4122354A89003D5F6B /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1165DC4022354A89003D5F6B /* AddEventViewController.swift */; };
+		11AB8FBB223007F00043E6F4 /* AdminFixturesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AB8FBA223007F00043E6F4 /* AdminFixturesTableViewController.swift */; };
+		11AB8FBF22300C5D0043E6F4 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AB8FBE22300C5D0043E6F4 /* TeamTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +61,6 @@
 		115DCAE6222A8E72003EE7A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		115DCAE8222A8E72003EE7A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		115DCAEB222A8E72003EE7A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		115DCAEE222A8E72003EE7A4 /* FYP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FYP.xcdatamodel; sourceTree = "<group>"; };
 		115DCAF0222A8E73003EE7A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		115DCAF3222A8E73003EE7A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		115DCAF5222A8E73003EE7A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,13 +77,23 @@
 		115DCB1F222A988E003EE7A4 /* FixtureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureViewController.swift; sourceTree = "<group>"; };
 		115DCB21222AA139003EE7A4 /* EventItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventItem.swift; sourceTree = "<group>"; };
 		115DCB23222AAAE3003EE7A4 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
-		115DCB25222ABA70003EE7A4 /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
 		115DCB27222AC4B6003EE7A4 /* PlayersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersTableViewController.swift; sourceTree = "<group>"; };
 		115DCB29222AC730003EE7A4 /* PlayerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerItem.swift; sourceTree = "<group>"; };
 		115DCB2B222AC86F003EE7A4 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 		115DCB2D222ADC3A003EE7A4 /* BingoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoViewController.swift; sourceTree = "<group>"; };
 		115DCB2F222ADD17003EE7A4 /* GameEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEvent.swift; sourceTree = "<group>"; };
 		115DCB33222ADEF8003EE7A4 /* BingoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoCollectionViewCell.swift; sourceTree = "<group>"; };
+		1165DC2F223011FB003D5F6B /* TeamsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewController.swift; sourceTree = "<group>"; };
+		1165DC312230120F003D5F6B /* TeamItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamItem.swift; sourceTree = "<group>"; };
+		1165DC3322303764003D5F6B /* AddFixtureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFixtureViewController.swift; sourceTree = "<group>"; };
+		1165DC3522304142003D5F6B /* AddTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTeamViewController.swift; sourceTree = "<group>"; };
+		1165DC3922304ACC003D5F6B /* AdminFixtureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminFixtureViewController.swift; sourceTree = "<group>"; };
+		1165DC3C22351A11003D5F6B /* FYP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FYP.xcdatamodel; sourceTree = "<group>"; };
+		1165DC3E22352029003D5F6B /* Ticket50Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket50Item.swift; sourceTree = "<group>"; };
+		1165DC4022354A89003D5F6B /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		11AB8FB7222F06E00043E6F4 /* FYP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FYP.entitlements; sourceTree = "<group>"; };
+		11AB8FBA223007F00043E6F4 /* AdminFixturesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminFixturesTableViewController.swift; sourceTree = "<group>"; };
+		11AB8FBE22300C5D0043E6F4 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,19 +144,20 @@
 		115DCAE5222A8E72003EE7A4 /* FYP */ = {
 			isa = PBXGroup;
 			children = (
+				1165DC3B22351A11003D5F6B /* FYP.xcdatamodeld */,
+				11AB8FB7222F06E00043E6F4 /* FYP.entitlements */,
 				115DCB32222ADEC2003EE7A4 /* Table Cells */,
 				115DCB31222ADEA0003EE7A4 /* Data Models */,
+				11AB8FBC223007FB0043E6F4 /* Admin */,
 				115DCAE6222A8E72003EE7A4 /* AppDelegate.swift */,
 				115DCAE8222A8E72003EE7A4 /* ViewController.swift */,
 				115DCAEA222A8E72003EE7A4 /* Main.storyboard */,
 				115DCAF0222A8E73003EE7A4 /* Assets.xcassets */,
 				115DCAF2222A8E73003EE7A4 /* LaunchScreen.storyboard */,
 				115DCAF5222A8E73003EE7A4 /* Info.plist */,
-				115DCAED222A8E72003EE7A4 /* FYP.xcdatamodeld */,
 				115DCB19222A906C003EE7A4 /* HomeTableViewController.swift */,
 				115DCB1F222A988E003EE7A4 /* FixtureViewController.swift */,
 				115DCB23222AAAE3003EE7A4 /* EventViewController.swift */,
-				115DCB25222ABA70003EE7A4 /* TicketsViewController.swift */,
 				115DCB27222AC4B6003EE7A4 /* PlayersTableViewController.swift */,
 				115DCB2D222ADC3A003EE7A4 /* BingoViewController.swift */,
 				115DCB33222ADEF8003EE7A4 /* BingoCollectionViewCell.swift */,
@@ -172,6 +190,8 @@
 				115DCB21222AA139003EE7A4 /* EventItem.swift */,
 				115DCB29222AC730003EE7A4 /* PlayerItem.swift */,
 				115DCB2F222ADD17003EE7A4 /* GameEvent.swift */,
+				1165DC312230120F003D5F6B /* TeamItem.swift */,
+				1165DC3E22352029003D5F6B /* Ticket50Item.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -182,8 +202,22 @@
 				115DCB2B222AC86F003EE7A4 /* PlayerTableViewCell.swift */,
 				115DCB1D222A985A003EE7A4 /* EventTableViewCell.swift */,
 				115DCB17222A9012003EE7A4 /* FixtureTableViewCell.swift */,
+				11AB8FBE22300C5D0043E6F4 /* TeamTableViewCell.swift */,
 			);
 			path = "Table Cells";
+			sourceTree = "<group>";
+		};
+		11AB8FBC223007FB0043E6F4 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				11AB8FBA223007F00043E6F4 /* AdminFixturesTableViewController.swift */,
+				1165DC2F223011FB003D5F6B /* TeamsTableViewController.swift */,
+				1165DC3322303764003D5F6B /* AddFixtureViewController.swift */,
+				1165DC3522304142003D5F6B /* AddTeamViewController.swift */,
+				1165DC3922304ACC003D5F6B /* AdminFixtureViewController.swift */,
+				1165DC4022354A89003D5F6B /* AddEventViewController.swift */,
+			);
+			path = Admin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +288,11 @@
 				TargetAttributes = {
 					115DCAE2222A8E72003EE7A4 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					115DCAF9222A8E73003EE7A4 = {
 						CreatedOnToolsVersion = 10.1;
@@ -318,18 +357,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				115DCB34222ADEF8003EE7A4 /* BingoCollectionViewCell.swift in Sources */,
+				1165DC4122354A89003D5F6B /* AddEventViewController.swift in Sources */,
 				115DCB2E222ADC3A003EE7A4 /* BingoViewController.swift in Sources */,
+				1165DC30223011FB003D5F6B /* TeamsTableViewController.swift in Sources */,
+				1165DC322230120F003D5F6B /* TeamItem.swift in Sources */,
 				115DCB2C222AC86F003EE7A4 /* PlayerTableViewCell.swift in Sources */,
 				115DCAE9222A8E72003EE7A4 /* ViewController.swift in Sources */,
 				115DCB2A222AC730003EE7A4 /* PlayerItem.swift in Sources */,
-				115DCAEF222A8E72003EE7A4 /* FYP.xcdatamodeld in Sources */,
+				1165DC3D22351A11003D5F6B /* FYP.xcdatamodeld in Sources */,
 				115DCAE7222A8E72003EE7A4 /* AppDelegate.swift in Sources */,
+				1165DC3F22352029003D5F6B /* Ticket50Item.swift in Sources */,
+				1165DC3422303764003D5F6B /* AddFixtureViewController.swift in Sources */,
 				115DCB30222ADD17003EE7A4 /* GameEvent.swift in Sources */,
 				115DCB18222A9012003EE7A4 /* FixtureTableViewCell.swift in Sources */,
-				115DCB26222ABA70003EE7A4 /* TicketsViewController.swift in Sources */,
+				11AB8FBF22300C5D0043E6F4 /* TeamTableViewCell.swift in Sources */,
+				1165DC3A22304ACC003D5F6B /* AdminFixtureViewController.swift in Sources */,
 				115DCB20222A988E003EE7A4 /* FixtureViewController.swift in Sources */,
 				115DCB24222AAAE3003EE7A4 /* EventViewController.swift in Sources */,
 				115DCB1E222A985A003EE7A4 /* EventTableViewCell.swift in Sources */,
+				1165DC3622304142003D5F6B /* AddTeamViewController.swift in Sources */,
+				11AB8FBB223007F00043E6F4 /* AdminFixturesTableViewController.swift in Sources */,
 				115DCB28222AC4B6003EE7A4 /* PlayersTableViewController.swift in Sources */,
 				115DCB1C222A916B003EE7A4 /* FixtureItem.swift in Sources */,
 				115DCB1A222A906C003EE7A4 /* HomeTableViewController.swift in Sources */,
@@ -508,6 +555,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FYP/FYP.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9S65Z2TB3K;
 				INFOPLIST_FILE = FYP/Info.plist;
@@ -517,6 +566,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-S65Z2TB3K.FYP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -526,6 +576,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FYP/FYP.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9S65Z2TB3K;
 				INFOPLIST_FILE = FYP/Info.plist;
@@ -535,6 +587,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-S65Z2TB3K.FYP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -664,12 +717,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		115DCAED222A8E72003EE7A4 /* FYP.xcdatamodeld */ = {
+		1165DC3B22351A11003D5F6B /* FYP.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				115DCAEE222A8E72003EE7A4 /* FYP.xcdatamodel */,
+				1165DC3C22351A11003D5F6B /* FYP.xcdatamodel */,
 			);
-			currentVersion = 115DCAEE222A8E72003EE7A4 /* FYP.xcdatamodel */;
+			currentVersion = 1165DC3C22351A11003D5F6B /* FYP.xcdatamodel */;
 			path = FYP.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

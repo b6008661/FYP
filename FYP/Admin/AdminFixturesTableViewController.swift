@@ -1,46 +1,21 @@
 //
-//  HomeTableViewController.swift
+//  AdminFixturesTableViewController.swift
 //  FYP
 //
-//  Created by Project  on 02/03/2019.
+//  Created by Project  on 06/03/2019.
 //  Copyright © 2019 Claire Smith. All rights reserved.
 //
 
 import UIKit
 import CoreData
 
-
-
-class HomeTableViewController: UITableViewController {
-
+class AdminFixturesTableViewController: UITableViewController {
+    
     var fixtures: [FixtureItem] = []
-    
-    
-    private func loadFixtures() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Fixture", in: context)
-        let newFixture = NSManagedObject(entity: entity!, insertInto: context)
-        newFixture.setValue("Nottingham Panthers", forKey: "homeTeam")
-        newFixture.setValue("Sheffield Steelers", forKey: "awayTeam")
-        newFixture.setValue("26/12/2018", forKey: "date")
-        newFixture.setValue("17:00", forKey: "time")
-        let newFixture2 = NSManagedObject(entity: entity!, insertInto: context)
-        newFixture2.setValue("Sheffield Steelers", forKey: "homeTeam")
-        newFixture2.setValue("Nottingham Panthers", forKey: "awayTeam")
-        newFixture2.setValue("27/12/2018", forKey: "date")
-        newFixture2.setValue("19:00", forKey: "time")
-        do {
-            try context.save()
-        } catch {
-            print("Failed saving")
-        }
 
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //loadFixtures()
+        self.viewWillAppear(true)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Fixture")
@@ -49,7 +24,6 @@ class HomeTableViewController: UITableViewController {
             let result = try context.fetch(request)
             for data in result as! [NSManagedObject] {
                 let fixture = FixtureItem(homeTeam: data.value(forKey: "homeTeam") as! String, awayTeam: data.value(forKey: "awayTeam") as! String, date: data.value(forKey: "date") as! String, time: data.value(forKey: "time") as! String)
-                print(data.value(forKey: "homeTeam") as! String)
                 fixtures += [fixture]
             }
             
@@ -73,19 +47,14 @@ class HomeTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FixtureTableViewCell", for: indexPath) as? FixtureTableViewCell else {
-            fatalError()
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FixtureTableViewCell", for: indexPath) as! FixtureTableViewCell
         
         let fixture = fixtures[indexPath.row]
-        print(fixture.homeTeam)
-        print(fixture.date)
-
         cell.homeTeam.image = UIImage(named: fixture.homeTeam)
         cell.awayTeam.image = UIImage(named: fixture.awayTeam)
         cell.dateLbl.text = fixture.date
         cell.timeLbl.text = fixture.time
-
+        
         return cell
     }
     
@@ -125,14 +94,54 @@ class HomeTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        super.prepare(for: segue, sender: sender)
+        
+        if let adminFixtureViewController = segue.destination as? AdminFixtureViewController {
+        
+            guard let selectedFixtureCell = sender as? FixtureTableViewCell else {
+                fatalError("Unexpected sender: \(String(describing: sender))")
+            }
+            
+            guard let indexPath = tableView.indexPath(for: selectedFixtureCell) else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+            
+            let selectedFixture = fixtures[indexPath.row]
+            adminFixtureViewController.fixture = selectedFixture
+        }
+        
     }
-    */
+ 
+    
+    @IBAction func unwindToFixtureList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? AddFixtureViewController, let fixture = sourceViewController.fixture {
+            
+            // Add a new meal.
+            let newIndexPath = IndexPath(row: fixtures.count, section: 0)
+            
+            fixtures.append(fixture)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+            
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            let entity = NSEntityDescription.entity(forEntityName: "Fixture", in: context)
+            let newFixture = NSManagedObject(entity: entity!, insertInto: context)
+            newFixture.setValue(fixture.homeTeam, forKey: "homeTeam")
+            newFixture.setValue(fixture.awayTeam, forKey: "awayTeam")
+            newFixture.setValue(fixture.date, forKey: "date")
+            newFixture.setValue(fixture.time, forKey: "time")
+            do {
+                try context.save()
+            } catch {
+                print("Failed saving")
+            }
+        }
+    }
 
 }

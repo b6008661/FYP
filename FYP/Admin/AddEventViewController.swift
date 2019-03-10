@@ -1,14 +1,14 @@
 //
-//  TicketsViewController.swift
+//  AddEventViewController.swift
 //  FYP
 //
-//  Created by Project  on 02/03/2019.
+//  Created by Project  on 10/03/2019.
 //  Copyright © 2019 Claire Smith. All rights reserved.
 //
 
 import UIKit
 
-class TicketsViewController: UIViewController {
+class AddEventViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
