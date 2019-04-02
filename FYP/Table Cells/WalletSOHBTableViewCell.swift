@@ -1,20 +1,16 @@
 //
-//  PlayerTableViewCell.swift
+//  WalletSOHBTableViewCell.swift
 //  FYP
 //
-//  Created by Project  on 02/03/2019.
+//  Created by Project  on 28/03/2019.
 //  Copyright © 2019 Claire Smith. All rights reserved.
 //
 
 import UIKit
 
-class PlayerTableViewCell: UITableViewCell {
-    
-    
+class WalletSOHBTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var playerImg: UIImageView!
-    @IBOutlet weak var numLbl: UILabel!
-    @IBOutlet weak var playerName: UILabel!
+    @IBOutlet weak var idLbl: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

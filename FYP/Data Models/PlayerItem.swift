@@ -13,11 +13,14 @@ class PlayerItem {
     var number: String
     var country: String
     var team: String
+    var age: String
     
-    init(name: String, number: String, country: String, team:String) {
+    init(name: String, number: String, country: String, team:String, age: String) {
         self.name = name
         self.number = number
         self.country = country
         self.team = team
+        self.age = age
+        
     }
 }

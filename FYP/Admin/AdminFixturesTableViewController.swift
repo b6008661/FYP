@@ -23,7 +23,7 @@ class AdminFixturesTableViewController: UITableViewController {
         do {
             let result = try context.fetch(request)
             for data in result as! [NSManagedObject] {
-                let fixture = FixtureItem(homeTeam: data.value(forKey: "homeTeam") as! String, awayTeam: data.value(forKey: "awayTeam") as! String, date: data.value(forKey: "date") as! String, time: data.value(forKey: "time") as! String)
+                let fixture = FixtureItem(id: data.value(forKey: "id") as! String, homeTeam: data.value(forKey: "homeTeam") as! String, awayTeam: data.value(forKey: "awayTeam") as! String, date: data.value(forKey: "date") as! String, time: data.value(forKey: "time") as! String, active: (data.value(forKey: "active") != nil))
                 fixtures += [fixture]
             }
             
@@ -131,10 +131,12 @@ class AdminFixturesTableViewController: UITableViewController {
             let context = appDelegate.persistentContainer.viewContext
             let entity = NSEntityDescription.entity(forEntityName: "Fixture", in: context)
             let newFixture = NSManagedObject(entity: entity!, insertInto: context)
+            newFixture.setValue(fixture.id, forKey: "id")
             newFixture.setValue(fixture.homeTeam, forKey: "homeTeam")
             newFixture.setValue(fixture.awayTeam, forKey: "awayTeam")
             newFixture.setValue(fixture.date, forKey: "date")
             newFixture.setValue(fixture.time, forKey: "time")
+            newFixture.setValue(fixture.active, forKey: "active")
             do {
                 try context.save()
             } catch {

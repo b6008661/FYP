@@ -1,51 +1,40 @@
 //
-//  TeamsTableViewController.swift
+//  PlayersTableViewController.swift
 //  FYP
 //
-//  Created by Project  on 06/03/2019.
+//  Created by Project  on 26/03/2019.
 //  Copyright © 2019 Claire Smith. All rights reserved.
 //
 
 import UIKit
 import CoreData
 
-class TeamsTableViewController: UITableViewController {
-    
-    var teams: [TeamItem] = []
-    
-    private func loadTeams() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Team", in: context)
-        let newTeam = NSManagedObject(entity: entity!, insertInto: context)
-        newTeam.setValue("Nottingham Panthers", forKey: "name")
-        let newTeam2 = NSManagedObject(entity: entity!, insertInto: context)
-        newTeam2.setValue("Sheffield Steelers", forKey: "name")
-        do {
-            try context.save()
-        } catch {
-            print("Failed saving")
-        }
-    }
+class AdminPlayersTableViewController: UITableViewController {
 
+    var players: [PlayerItem] = []
+    var team: TeamItem?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadTeams()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Team")
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Player")
         request.returnsObjectsAsFaults = false
         do {
             let result = try context.fetch(request)
             for data in result as! [NSManagedObject] {
-                let team = TeamItem(name: data.value(forKey: "name") as! String)
-                teams += [team]
+                if team?.name == data.value(forKey: "team") as? String {
+                let player = PlayerItem(name: data.value(forKey: "name") as! String, number: data.value(forKey: "number") as! String, country: data.value(forKey: "country") as! String, team: data.value(forKey: "team") as! String, age: data.value(forKey: "age") as! String)
+                
+                players += [player]
+                }
             }
             
         } catch {
             
             print("Failed")
         }
+
     }
 
     // MARK: - Table view data source
@@ -57,17 +46,20 @@ class TeamsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return teams.count
+        return players.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TeamTableViewCell", for: indexPath) as! TeamTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerTableViewCell", for: indexPath) as? PlayerTableViewCell else {
+            fatalError()
+        }
         
-        let team = teams[indexPath.row]
+        let player = players[indexPath.row]
         
-        cell.teamLogo.image = UIImage(named: team.name)
-        cell.teamName.text = team.name
+        cell.playerImg.image = UIImage(named: player.name)
+        cell.playerName.text = player.name
+        cell.numLbl.text = player.number
         
         return cell
     }
@@ -113,45 +105,26 @@ class TeamsTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        
-        //switch statement for each segue
-        switch(segue.identifier ?? "") {
-        case "ViewPlayers":
-            guard let teamViewController = segue.destination as? AdminPlayersTableViewController else {
-                fatalError("Unexpected destination: \(segue.destination)")
-            }
-            
-            guard let selectedTeamCell = sender as? TeamTableViewCell else {
-                fatalError("Unexpected sender: \(String(describing: sender))")
-            }
-            
-            guard let indexPath = tableView.indexPath(for: selectedTeamCell) else {
-                fatalError("The selected cell is not being displayed by the table")
-            }
-            
-            let team = teams[indexPath.row]
-            teamViewController.team = team
-            
-        default:
-            fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
-        }
+        //send team over to
     }
     
-    
-    @IBAction func unwindToFixtureList(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.source as? AddTeamViewController, let team = sourceViewController.team {
+    @IBAction func unwindToPlayerList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? AddPlayerViewController, let player = sourceViewController.player {
             
-            let newIndexPath = IndexPath(row: teams.count, section: 0)
+            let newIndexPath = IndexPath(row: players.count, section: 0)
             
-            teams.append(team)
+            players.append(player)
             tableView.insertRows(at: [newIndexPath], with: .automatic)
             
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let context = appDelegate.persistentContainer.viewContext
-            let entity = NSEntityDescription.entity(forEntityName: "Team", in: context)
-            let newTeam = NSManagedObject(entity: entity!, insertInto: context)
-            newTeam.setValue(team.name, forKey: "name")
+            let entity = NSEntityDescription.entity(forEntityName: "Player", in: context)
+            let newPlayer = NSManagedObject(entity: entity!, insertInto: context)
+            newPlayer.setValue(player.name, forKey: "name")
+            newPlayer.setValue(player.number, forKey: "number")
+            newPlayer.setValue(player.country, forKey: "country")
+            newPlayer.setValue(team?.name, forKey: "team")
+            newPlayer.setValue(player.age, forKey: "age")
             do {
                 try context.save()
             } catch {
@@ -159,5 +132,4 @@ class TeamsTableViewController: UITableViewController {
             }
         }
     }
-
 }

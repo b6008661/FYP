@@ -9,15 +9,19 @@
 import UIKit
 
 class FixtureItem {
+    var id: String
     var homeTeam: String
     var awayTeam: String
     var date: String
     var time: String
+    var active: Bool
     
-    init(homeTeam: String, awayTeam: String, date: String, time: String) {
+    init(id: String, homeTeam: String, awayTeam: String, date: String, time: String, active: Bool) {
+        self.id = id
         self.homeTeam = homeTeam
         self.awayTeam = awayTeam
         self.date = date
         self.time = time
+        self.active = active
     }
 }

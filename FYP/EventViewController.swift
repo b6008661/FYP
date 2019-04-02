@@ -10,6 +10,7 @@ import UIKit
 
 class EventViewController: UIViewController {
     
+    //MARK: Properties 
     var event: EventItem?
     
     @IBOutlet weak var nameLbl: UILabel!
@@ -18,6 +19,7 @@ class EventViewController: UIViewController {
     @IBOutlet weak var timeLbl: UILabel!
     @IBOutlet weak var periodLbl: UILabel!
     
+    //MARK: On Load
     override func viewDidLoad() {
         super.viewDidLoad()
         if let event = event {

@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BingoEvent" representedClassName="BingoEvent" syncable="YES" codeGenerationType="class">
+        <attribute name="fixtureID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="period" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="player" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Event" representedClassName="Event" syncable="YES" codeGenerationType="class">
+        <attribute name="fixtureID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="period" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="player" optional="YES" attributeType="String" syncable="YES"/>
@@ -9,15 +18,12 @@
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Fixture" representedClassName="Fixture" syncable="YES" codeGenerationType="class">
+        <attribute name="active" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="awayTeam" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="homeTeam" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
-    <entity name="GameEvent" representedClassName="GameEvent" syncable="YES" codeGenerationType="class">
-        <attribute name="period" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="player" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Player" representedClassName="Player" syncable="YES" codeGenerationType="class">
         <attribute name="age" optional="YES" attributeType="String" syncable="YES"/>
@@ -27,24 +33,33 @@
         <attribute name="team" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Team" representedClassName="Team" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Ticket50" representedClassName="Ticket50" syncable="YES" codeGenerationType="class">
-        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fixtureID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="owner" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="TicketSOHB" representedClassName="TicketSOHB" syncable="YES" codeGenerationType="class">
-        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fixtureID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="owner" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="player" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Event" positionX="-54" positionY="18" width="128" height="135"/>
-        <element name="Fixture" positionX="-63" positionY="-18" width="128" height="105"/>
-        <element name="GameEvent" positionX="-18" positionY="90" width="128" height="90"/>
+        <element name="BingoEvent" positionX="-18" positionY="90" width="128" height="120"/>
+        <element name="Event" positionX="-54" positionY="18" width="128" height="163"/>
+        <element name="Fixture" positionX="-63" positionY="-18" width="128" height="135"/>
         <element name="Player" positionX="-36" positionY="63" width="128" height="120"/>
-        <element name="Team" positionX="-36" positionY="63" width="128" height="60"/>
-        <element name="Ticket50" positionX="-27" positionY="72" width="128" height="75"/>
+        <element name="Team" positionX="-36" positionY="63" width="128" height="73"/>
+        <element name="Ticket50" positionX="-27" positionY="72" width="128" height="88"/>
         <element name="TicketSOHB" positionX="-18" positionY="81" width="128" height="90"/>
+        <element name="User" positionX="-36" positionY="72" width="128" height="105"/>
     </elements>
 </model>

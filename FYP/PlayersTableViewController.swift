@@ -8,21 +8,25 @@
 
 import UIKit
 import CoreData
+import os.log
 
 class PlayersTableViewController: UITableViewController {
     
+    //MARK: Properties
     var players: [PlayerItem] = []
+    var team: TeamItem?
     
+    //MARK: Methods
     private func loadPlayers() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "Player", in: context)
         let newPlayer = NSManagedObject(entity: entity!, insertInto: context)
         newPlayer.setValue("Robert Farmer", forKey: "name")
-        newPlayer.setValue("United Kingdom", forKey: "country")
-        newPlayer.setValue("28", forKey: "age")
         newPlayer.setValue("19", forKey: "number")
+        newPlayer.setValue("United Kingdom", forKey: "country")
         newPlayer.setValue("Nottingham Panthers", forKey: "team")
+        newPlayer.setValue("28", forKey: "age")
         do {
             try context.save()
         } catch {
@@ -30,6 +34,7 @@ class PlayersTableViewController: UITableViewController {
         }
     }
 
+    //MARK: On Load
     override func viewDidLoad() {
         super.viewDidLoad()
         loadPlayers()
@@ -40,8 +45,11 @@ class PlayersTableViewController: UITableViewController {
         do {
             let result = try context.fetch(request)
             for data in result as! [NSManagedObject] {
-                let player = PlayerItem(name: data.value(forKey: "name") as! String, number: data.value(forKey: "number") as! String, country: data.value(forKey: "country") as! String, team: data.value(forKey: "team") as! String)
+                if team?.name == data.value(forKey: "team") as? String {
+                let player = PlayerItem(name: data.value(forKey: "name") as! String, number: data.value(forKey: "number") as! String, country: data.value(forKey: "country") as! String, team: data.value(forKey: "team") as! String, age: data.value(forKey: "age") as! String)
+                
                 players += [player]
+                }
             }
             
         } catch {
@@ -50,8 +58,7 @@ class PlayersTableViewController: UITableViewController {
         }
     }
 
-    // MARK: - Table view data source
-
+    // MARK: - Table View Data Source
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -62,7 +69,6 @@ class PlayersTableViewController: UITableViewController {
         return players.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerTableViewCell", for: indexPath) as? PlayerTableViewCell else {
             fatalError()
@@ -73,7 +79,6 @@ class PlayersTableViewController: UITableViewController {
         cell.playerImg.image = UIImage(named: player.name)
         cell.playerName.text = player.name
         cell.numLbl.text = player.number
-        cell.teamLbl.text = player.team
 
         return cell
     }
@@ -114,14 +119,25 @@ class PlayersTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        super.prepare(for: segue, sender: sender)
+        guard let viewPlayerViewController = segue.destination as? ViewPlayerViewController else {
+            fatalError("Unexpected destination: \(segue.destination)")
+        }
+        
+        guard let selectedPlayerCell = sender as? PlayerTableViewCell else {
+            fatalError("Unexpected sender: \(String(describing: sender))")
+        }
+        
+        guard let indexPath = tableView.indexPath(for: selectedPlayerCell) else {
+            fatalError("The selected cell is not being displayed by the table")
+        }
+        
+        let selectedPlayer = players[indexPath.row]
+        viewPlayerViewController.player = selectedPlayer
     }
-    */
+    
 
 }

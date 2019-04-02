@@ -8,14 +8,18 @@
 
 import UIKit
 
-class GameEventItem {
+class BingoEventItem {
     var type: String
     var player: String
     var period: String
+    var id: String
+    var fixtureID: String
     
-    init(type: String, player: String, period: String) {
+    init(type: String, player: String, period: String, id: String, fixtureID: String) {
         self.type = type
         self.player = player
         self.period = period
+        self.id = id
+        self.fixtureID = fixtureID
     }
 }

@@ -1,20 +1,16 @@
 //
-//  PlayerTableViewCell.swift
+//  BingoEventTableViewCell.swift
 //  FYP
 //
-//  Created by Project  on 02/03/2019.
+//  Created by Project  on 24/03/2019.
 //  Copyright © 2019 Claire Smith. All rights reserved.
 //
 
 import UIKit
 
-class PlayerTableViewCell: UITableViewCell {
-    
-    
+class BingoEventTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var playerImg: UIImageView!
-    @IBOutlet weak var numLbl: UILabel!
-    @IBOutlet weak var playerName: UILabel!
+    @IBOutlet weak var eventLbl: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

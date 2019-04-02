@@ -10,26 +10,31 @@ import UIKit
 import CoreData
 
 
-
 class HomeTableViewController: UITableViewController {
 
+    //MARK: Properties
     var fixtures: [FixtureItem] = []
+    var currentUser: UserItem?
     
-    
+    //MARK: Methods
     private func loadFixtures() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "Fixture", in: context)
         let newFixture = NSManagedObject(entity: entity!, insertInto: context)
+        newFixture.setValue("1", forKey: "id")
         newFixture.setValue("Nottingham Panthers", forKey: "homeTeam")
         newFixture.setValue("Sheffield Steelers", forKey: "awayTeam")
         newFixture.setValue("26/12/2018", forKey: "date")
         newFixture.setValue("17:00", forKey: "time")
+        newFixture.setValue(false, forKey: "active")
         let newFixture2 = NSManagedObject(entity: entity!, insertInto: context)
+        newFixture2.setValue("2", forKey: "id")
         newFixture2.setValue("Sheffield Steelers", forKey: "homeTeam")
         newFixture2.setValue("Nottingham Panthers", forKey: "awayTeam")
         newFixture2.setValue("27/12/2018", forKey: "date")
         newFixture2.setValue("19:00", forKey: "time")
+        newFixture2.setValue(false, forKey: "active")
         do {
             try context.save()
         } catch {
@@ -38,9 +43,10 @@ class HomeTableViewController: UITableViewController {
 
     }
     
+    //MARK: On Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        //loadFixtures()
+        loadFixtures()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Fixture")
@@ -48,8 +54,7 @@ class HomeTableViewController: UITableViewController {
         do {
             let result = try context.fetch(request)
             for data in result as! [NSManagedObject] {
-                let fixture = FixtureItem(homeTeam: data.value(forKey: "homeTeam") as! String, awayTeam: data.value(forKey: "awayTeam") as! String, date: data.value(forKey: "date") as! String, time: data.value(forKey: "time") as! String)
-                print(data.value(forKey: "homeTeam") as! String)
+                let fixture = FixtureItem(id: data.value(forKey: "id") as! String, homeTeam: data.value(forKey: "homeTeam") as! String, awayTeam: data.value(forKey: "awayTeam") as! String, date: data.value(forKey: "date") as! String, time: data.value(forKey: "time") as! String, active: (data.value(forKey: "active") != nil))
                 fixtures += [fixture]
             }
             
@@ -60,7 +65,6 @@ class HomeTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -70,7 +74,6 @@ class HomeTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return fixtures.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "FixtureTableViewCell", for: indexPath) as? FixtureTableViewCell else {
@@ -78,8 +81,6 @@ class HomeTableViewController: UITableViewController {
         }
         
         let fixture = fixtures[indexPath.row]
-        print(fixture.homeTeam)
-        print(fixture.date)
 
         cell.homeTeam.image = UIImage(named: fixture.homeTeam)
         cell.awayTeam.image = UIImage(named: fixture.awayTeam)
@@ -125,14 +126,27 @@ class HomeTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        super.prepare(for: segue, sender: sender)
+        
+        guard let fixtureViewController = segue.destination as? FixtureViewController else {
+            fatalError("Unexpected destination: \(segue.destination)")
+        }
+            
+            guard let selectedFixtureCell = sender as? FixtureTableViewCell else {
+                fatalError("Unexpected sender: \(String(describing: sender))")
+            }
+            
+            guard let indexPath = tableView.indexPath(for: selectedFixtureCell) else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+            
+            let selectedFixture = fixtures[indexPath.row]
+            fixtureViewController.fixture = selectedFixture
+            fixtureViewController.currentUser = currentUser
     }
-    */
+    
 
 }
