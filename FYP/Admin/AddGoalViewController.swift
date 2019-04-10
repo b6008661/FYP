@@ -14,12 +14,33 @@ class AddGoalViewController: UIViewController {
     
     var event: EventItem? = nil
     var fixture: FixtureItem? = nil
+    var period: String = ""
     @IBOutlet weak var playerNameTxtField: UITextField!
     @IBOutlet weak var teamTxtField: UITextField!
     @IBOutlet weak var timeTxtField: UITextField!
-    @IBOutlet weak var periodTxtField: UITextField!
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var period1Button: UIButton!
+    @IBOutlet weak var period2Button: UIButton!
+    @IBOutlet weak var period3Button: UIButton!
     
+    @IBAction func period1(_ sender: UIButton) {
+        period1Button.setBackgroundImage(UIImage(named: "Period1Pressed"), for: .normal)
+        period2Button.setBackgroundImage(UIImage(named: "Period2Button"), for: .normal)
+        period3Button.setBackgroundImage(UIImage(named: "Period3Button"), for: .normal)
+        period = "1"
+    }
+    @IBAction func period2(_ sender: UIButton) {
+        period2Button.setBackgroundImage(UIImage(named: "Period2Pressed"), for: .normal)
+        period1Button.setBackgroundImage(UIImage(named: "Period1Button"), for: .normal)
+        period3Button.setBackgroundImage(UIImage(named: "Period3Button"), for: .normal)
+        period = "2"
+    }
+    @IBAction func period3(_ sender: UIButton) {
+        period = "3"
+        period3Button.setBackgroundImage(UIImage(named: "Period3Pressed"), for: .normal)
+        period1Button.setBackgroundImage(UIImage(named: "Period1Button"), for: .normal)
+        period2Button.setBackgroundImage(UIImage(named: "Period2Button"), for: .normal)
+    }
     
     @IBAction func cancel(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
@@ -44,7 +65,6 @@ class AddGoalViewController: UIViewController {
         let playerName = playerNameTxtField.text ?? ""
         let teamName = teamTxtField.text ?? ""
         let time = timeTxtField.text ?? ""
-        let period = periodTxtField.text ?? ""
         
         var events: [NSManagedObject] = []
         let appDelegate = UIApplication.shared.delegate as! AppDelegate

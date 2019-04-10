@@ -74,7 +74,7 @@ class BingoViewController: UIViewController, UICollectionViewDelegate, UICollect
                 print(data.value(forKey: "period") ?? "")
                 print(data.value(forKey: "id") ?? "")
                 print(data.value(forKey: "fixtureID") ?? "")
-                let gameEvent = BingoEventItem(type: data.value(forKey: "type") as! String, player: data.value(forKey: "player") as! String, period: data.value(forKey: "period") as! String, id: data.value(forKey: "id") as! String, fixtureID: data.value(forKey: "fixtureID") as! String)
+                let gameEvent = BingoEventItem(type: data.value(forKey: "type") as! String, player: data.value(forKey: "player") as! String, period: data.value(forKey: "period") as! String, id: data.value(forKey: "id") as! String, fixtureID: data.value(forKey: "fixtureID") as! String, selected: data.value(forKey: "selected") as! Bool)
                 
                 gameEvents += [gameEvent]
             }

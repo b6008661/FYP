@@ -17,10 +17,16 @@ class TeamsTableViewController: UITableViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "Team", in: context)
-        let newTeam = NSManagedObject(entity: entity!, insertInto: context)
-        newTeam.setValue("Nottingham Panthers", forKey: "name")
-        let newTeam2 = NSManagedObject(entity: entity!, insertInto: context)
-        newTeam2.setValue("Sheffield Steelers", forKey: "name")
+        let nottinghamPanthers = NSManagedObject(entity: entity!, insertInto: context)
+        nottinghamPanthers.setValue("Nottingham Panthers", forKey: "name")
+        let braeheadClan = NSManagedObject(entity: entity!, insertInto: context)
+        braeheadClan.setValue("Braehead Clan", forKey: "name")
+        let cardiffDevils = NSManagedObject(entity: entity!, insertInto: context)
+        cardiffDevils.setValue("Cardiff Devils", forKey: "name")
+        let belfastGiants = NSManagedObject(entity: entity!, insertInto: context)
+        belfastGiants.setValue("Belfast Giants", forKey: "name")
+        let manchesterStorm = NSManagedObject(entity: entity!, insertInto: context)
+        manchesterStorm.setValue("Manchester Storm", forKey: "name")
         do {
             try context.save()
         } catch {

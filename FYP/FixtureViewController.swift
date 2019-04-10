@@ -130,6 +130,12 @@ class FixtureViewController: UIViewController, UITableViewDataSource, UITableVie
             let team = TeamItem(name: (fixture?.homeTeam)!)
             teamViewController.team = team
             
+        case "ViewAwayTeam":
+            guard let teamViewController = segue.destination as? PlayersTableViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            let team = TeamItem(name: (fixture?.awayTeam)!)
+            teamViewController.team = team
         case "5050":
             let destinationNavigationController = segue.destination as! UINavigationController
             //        let targetController = destinationNavigationController.topViewController

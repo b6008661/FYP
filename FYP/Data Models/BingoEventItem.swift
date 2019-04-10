@@ -14,12 +14,14 @@ class BingoEventItem {
     var period: String
     var id: String
     var fixtureID: String
+    var selected: Bool
     
-    init(type: String, player: String, period: String, id: String, fixtureID: String) {
+    init(type: String, player: String, period: String, id: String, fixtureID: String, selected: Bool) {
         self.type = type
         self.player = player
         self.period = period
         self.id = id
         self.fixtureID = fixtureID
+        self.selected = selected
     }
 }

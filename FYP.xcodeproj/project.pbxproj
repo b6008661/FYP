@@ -16,7 +16,6 @@
 		115DCAE7222A8E72003EE7A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCAE6222A8E72003EE7A4 /* AppDelegate.swift */; };
 		115DCAE9222A8E72003EE7A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCAE8222A8E72003EE7A4 /* ViewController.swift */; };
 		115DCAEC222A8E72003EE7A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115DCAEA222A8E72003EE7A4 /* Main.storyboard */; };
-		115DCAF1222A8E73003EE7A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 115DCAF0222A8E73003EE7A4 /* Assets.xcassets */; };
 		115DCAF4222A8E73003EE7A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115DCAF2222A8E73003EE7A4 /* LaunchScreen.storyboard */; };
 		115DCAFF222A8E73003EE7A4 /* FYPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCAFE222A8E73003EE7A4 /* FYPTests.swift */; };
 		115DCB0A222A8E73003EE7A4 /* FYPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB09222A8E73003EE7A4 /* FYPUITests.swift */; };
@@ -43,6 +42,7 @@
 		1165DC4322354F04003D5F6B /* AddPenaltyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1165DC4222354F04003D5F6B /* AddPenaltyViewController.swift */; };
 		1165DC45223555DE003D5F6B /* AddGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1165DC44223555DE003D5F6B /* AddGoalViewController.swift */; };
 		116902CA223576770062D92B /* ViewPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116902C9223576770062D92B /* ViewPlayerViewController.swift */; };
+		117343B8225DE60900F64420 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117343B7225DE60900F64420 /* Assets.xcassets */; };
 		11754CEC224CFDCD00EA0D9D /* BuySOHBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11754CEB224CFDCD00EA0D9D /* BuySOHBViewController.swift */; };
 		11754CEE224D09A400EA0D9D /* WalletSOHBTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11754CED224D09A400EA0D9D /* WalletSOHBTableViewCell.swift */; };
 		11856D9E2242B2EE00A13A59 /* AdminGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11856D9D2242B2EE00A13A59 /* AdminGamesViewController.swift */; };
@@ -88,7 +88,6 @@
 		115DCAE6222A8E72003EE7A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		115DCAE8222A8E72003EE7A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		115DCAEB222A8E72003EE7A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		115DCAF0222A8E73003EE7A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		115DCAF3222A8E73003EE7A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		115DCAF5222A8E73003EE7A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		115DCAFA222A8E73003EE7A4 /* FYPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FYPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +119,7 @@
 		1165DC4222354F04003D5F6B /* AddPenaltyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPenaltyViewController.swift; sourceTree = "<group>"; };
 		1165DC44223555DE003D5F6B /* AddGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewController.swift; sourceTree = "<group>"; };
 		116902C9223576770062D92B /* ViewPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPlayerViewController.swift; sourceTree = "<group>"; };
+		117343B7225DE60900F64420 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11754CEB224CFDCD00EA0D9D /* BuySOHBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuySOHBViewController.swift; sourceTree = "<group>"; };
 		11754CED224D09A400EA0D9D /* WalletSOHBTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletSOHBTableViewCell.swift; sourceTree = "<group>"; };
 		11856D9D2242B2EE00A13A59 /* AdminGamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminGamesViewController.swift; sourceTree = "<group>"; };
@@ -193,8 +193,8 @@
 				11AB8FBC223007FB0043E6F4 /* Admin */,
 				115DCAE6222A8E72003EE7A4 /* AppDelegate.swift */,
 				115DCAEA222A8E72003EE7A4 /* Main.storyboard */,
-				115DCAF0222A8E73003EE7A4 /* Assets.xcassets */,
 				115DCAF2222A8E73003EE7A4 /* LaunchScreen.storyboard */,
+				117343B7225DE60900F64420 /* Assets.xcassets */,
 				115DCAF5222A8E73003EE7A4 /* Info.plist */,
 				115DCAE8222A8E72003EE7A4 /* ViewController.swift */,
 				115DCB19222A906C003EE7A4 /* HomeTableViewController.swift */,
@@ -393,7 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				115DCAF4222A8E73003EE7A4 /* LaunchScreen.storyboard in Resources */,
-				115DCAF1222A8E73003EE7A4 /* Assets.xcassets in Resources */,
+				117343B8225DE60900F64420 /* Assets.xcassets in Resources */,
 				115DCAEC222A8E72003EE7A4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

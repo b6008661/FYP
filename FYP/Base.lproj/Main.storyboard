@@ -74,13 +74,37 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" background="TextField" translatesAutoresizingMaskIntoConstraints="NO" id="NAm-fF-yY4">
-                                <rect key="frame" x="58" y="323" width="259" height="30"/>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NX2-My-gIt">
+                                <rect key="frame" x="37" y="323" width="95" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <state key="normal" backgroundImage="Period1Button"/>
+                                <connections>
+                                    <action selector="period1:" destination="qVe-yD-cdU" eventType="touchUpInside" id="GoM-yU-Ur6"/>
+                                    <action selector="period1:" destination="315-sm-bJ5" eventType="touchUpInside" id="R0c-Mq-td9"/>
+                                    <action selector="period1:" destination="IXU-fD-76Y" eventType="touchUpInside" id="UW3-8d-BqU"/>
+                                </connections>
+                            </button>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YlY-k3-QeY">
+                                <rect key="frame" x="140" y="323" width="95" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Period2Button"/>
+                                <connections>
+                                    <action selector="period2:" destination="IXU-fD-76Y" eventType="touchUpInside" id="5vF-yc-c46"/>
+                                    <action selector="period2:" destination="315-sm-bJ5" eventType="touchUpInside" id="XBz-vY-4vH"/>
+                                    <action selector="period2Button:" destination="qVe-yD-cdU" eventType="touchUpInside" id="oZg-lU-ncE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIV-YU-A67">
+                                <rect key="frame" x="243" y="323" width="95" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Period3Button"/>
+                                <connections>
+                                    <action selector="period2Button:" destination="qVe-yD-cdU" eventType="touchUpInside" id="3FK-Fp-q33"/>
+                                    <action selector="period3:" destination="qVe-yD-cdU" eventType="touchUpInside" id="3Fo-HY-Muh"/>
+                                    <action selector="period3:" destination="315-sm-bJ5" eventType="touchUpInside" id="D5l-W1-Qdc"/>
+                                    <action selector="period3:" destination="IXU-fD-76Y" eventType="touchUpInside" id="Qyg-c9-m3B"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="DOv-yJ-aRv"/>
@@ -98,7 +122,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="periodTxtField" destination="NAm-fF-yY4" id="Bt9-UK-7oU"/>
+                        <outlet property="period1Button" destination="NX2-My-gIt" id="VgF-o7-HVh"/>
+                        <outlet property="period2Button" destination="YlY-k3-QeY" id="xcK-Ee-7sR"/>
+                        <outlet property="period3Button" destination="gIV-YU-A67" id="bVY-4e-cbT"/>
                         <outlet property="playerNameTxtField" destination="iCV-iK-SW2" id="Tf8-Hl-zsF"/>
                         <outlet property="saveButton" destination="8Wa-tZ-H78" id="Wqe-eY-gyx"/>
                         <outlet property="teamTxtField" destination="Cml-Rk-e97" id="39D-B4-JUP"/>
@@ -119,17 +145,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7n-2C-rJx">
-                                <rect key="frame" x="57" y="111" width="237" height="139"/>
+                                <rect key="frame" x="57" y="111" width="237" height="122"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="50/50"/>
+                                <state key="normal" backgroundImage="50"/>
                                 <connections>
                                     <segue destination="nTQ-Gv-Jp6" kind="show" identifier="View5050" id="KDP-N7-XUf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kV7-nS-A65">
-                                <rect key="frame" x="57" y="300" width="237" height="139"/>
+                                <rect key="frame" x="57" y="270" width="237" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="SOHB"/>
+                                <state key="normal" backgroundImage="SHOHB"/>
                                 <connections>
                                     <segue destination="Tvd-P4-9y6" kind="show" identifier="ViewSOHB" id="NyF-iR-qx3"/>
                                 </connections>
@@ -295,13 +321,31 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" background="TextField" translatesAutoresizingMaskIntoConstraints="NO" id="vX6-DR-Y09">
-                                <rect key="frame" x="58" y="263" width="259" height="30"/>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aco-gw-gCY">
+                                <rect key="frame" x="41" y="269" width="95" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <state key="normal" backgroundImage="Period1Button"/>
+                                <connections>
+                                    <action selector="period1:" destination="qVe-yD-cdU" eventType="touchUpInside" id="riw-jD-78c"/>
+                                </connections>
+                            </button>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSP-xR-kRH">
+                                <rect key="frame" x="144" y="269" width="95" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Period2Button"/>
+                                <connections>
+                                    <action selector="period2Button:" destination="qVe-yD-cdU" eventType="touchUpInside" id="Amc-sZ-o1O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L61-yO-eDK">
+                                <rect key="frame" x="247" y="269" width="95" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Period3Button"/>
+                                <connections>
+                                    <action selector="period2Button:" destination="qVe-yD-cdU" eventType="touchUpInside" id="wwt-7w-Mct"/>
+                                    <action selector="period3:" destination="qVe-yD-cdU" eventType="touchUpInside" id="EfU-pI-8fq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="3lI-3l-g6R"/>
@@ -319,7 +363,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="periodTxtField" destination="vX6-DR-Y09" id="fj5-UK-nLH"/>
+                        <outlet property="period1Button" destination="aco-gw-gCY" id="pTZ-wH-inx"/>
+                        <outlet property="period2Button" destination="gSP-xR-kRH" id="9Lo-al-zQf"/>
+                        <outlet property="period3Button" destination="L61-yO-eDK" id="Ofc-p9-170"/>
                         <outlet property="playerTxtField" destination="LC5-8v-Ipw" id="jBI-dk-ZY8"/>
                         <outlet property="saveButton" destination="Kb2-Gj-2yL" id="OD3-mO-Jmd"/>
                         <outlet property="typeTxtField" destination="j9h-uG-0ou" id="UwH-af-R1g"/>
@@ -413,19 +459,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A21-S6-VPI">
-                                <rect key="frame" x="157" y="149" width="63" height="42"/>
+                                <rect key="frame" x="57" y="122" width="261" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Bingo"/>
+                                <state key="normal" backgroundImage="BingoButton"/>
                                 <connections>
                                     <segue destination="wvD-Oe-ksy" kind="show" identifier="Bingo" id="1ew-33-1gm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Yg-xn-asv">
-                                <rect key="frame" x="141" y="373" width="98" height="42"/>
+                                <rect key="frame" x="50" y="320" width="274" height="134"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Predictor"/>
+                                <state key="normal" backgroundImage="PredictorButton"/>
                                 <connections>
                                     <segue destination="LDn-jX-GlJ" kind="show" id="lYr-qI-JB2"/>
                                 </connections>
@@ -588,19 +634,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDl-eI-0Rr">
-                                <rect key="frame" x="67" y="74" width="48" height="30"/>
+                                <rect key="frame" x="46" y="74" width="90" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Games"/>
+                                <state key="normal" backgroundImage="GamesButton"/>
                                 <connections>
                                     <segue destination="gUG-kz-fop" kind="show" identifier="Games" id="4d8-Vh-fGc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvd-ZG-hI4">
-                                <rect key="frame" x="252" y="74" width="50" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Tickets"/>
-                                <connections>
-                                    <segue destination="NEb-sK-hBL" kind="show" identifier="Tickets" id="UL6-bX-8g8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pee-hv-uTF">
@@ -618,6 +656,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvd-ZG-hI4">
+                                <rect key="frame" x="234" y="69" width="88" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="TicketsButton"/>
+                                <connections>
+                                    <segue destination="NEb-sK-hBL" kind="show" identifier="Tickets" id="UL6-bX-8g8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="cbc-xc-xC2"/>
@@ -717,13 +763,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" background="TextField" translatesAutoresizingMaskIntoConstraints="NO" id="VFI-nj-9Hl">
-                                <rect key="frame" x="58" y="395" width="259" height="30"/>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYR-Bk-5g9">
+                                <rect key="frame" x="37" y="395" width="95" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <state key="normal" backgroundImage="Period1Button"/>
+                                <connections>
+                                    <action selector="period1:" destination="qVe-yD-cdU" eventType="touchUpInside" id="8fU-DL-zBq"/>
+                                    <action selector="period1:" destination="315-sm-bJ5" eventType="touchUpInside" id="9Uz-CX-XAN"/>
+                                </connections>
+                            </button>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zo-rn-EU7">
+                                <rect key="frame" x="140" y="395" width="95" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Period2Button"/>
+                                <connections>
+                                    <action selector="period2:" destination="315-sm-bJ5" eventType="touchUpInside" id="Am3-wQ-P2c"/>
+                                    <action selector="period2Button:" destination="qVe-yD-cdU" eventType="touchUpInside" id="Yvg-ba-mZW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciC-ji-8rR">
+                                <rect key="frame" x="243" y="395" width="95" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Period3Button"/>
+                                <connections>
+                                    <action selector="period2Button:" destination="qVe-yD-cdU" eventType="touchUpInside" id="Cf6-au-q1H"/>
+                                    <action selector="period3:" destination="qVe-yD-cdU" eventType="touchUpInside" id="Acm-mQ-CxP"/>
+                                    <action selector="period3:" destination="315-sm-bJ5" eventType="touchUpInside" id="fjE-II-RdF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="HnM-9F-dg2"/>
@@ -742,7 +809,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="penaltyNameTxtField" destination="oqt-HV-W3n" id="e1c-U2-tvo"/>
-                        <outlet property="periodTxtField" destination="VFI-nj-9Hl" id="Du7-0G-fCk"/>
+                        <outlet property="period1Button" destination="OYR-Bk-5g9" id="fRp-IM-W4R"/>
+                        <outlet property="period2Button" destination="1zo-rn-EU7" id="wH4-L9-1eB"/>
+                        <outlet property="period3Button" destination="ciC-ji-8rR" id="Jw0-mz-cc4"/>
                         <outlet property="playerNameTxtField" destination="r8K-qM-OZg" id="GbH-W3-1ed"/>
                         <outlet property="saveButton" destination="iC8-03-edU" id="mcA-L9-pya"/>
                         <outlet property="teamTxtField" destination="qn4-Ov-XYu" id="vDd-0Z-Zl1"/>
@@ -924,7 +993,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGs-i8-Zo0">
                                 <rect key="frame" x="64" y="96" width="248" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Fixtures"/>
+                                <state key="normal" backgroundImage="FixturesButton"/>
                                 <connections>
                                     <segue destination="rzh-w1-18W" kind="show" id="55c-8G-r76"/>
                                 </connections>
@@ -932,7 +1001,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWa-pS-Apd">
                                 <rect key="frame" x="64" y="254" width="248" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Teams"/>
+                                <state key="normal" backgroundImage="teamsButton"/>
                                 <connections>
                                     <segue destination="4Jm-zi-TbD" kind="show" id="0ra-xe-oyb"/>
                                 </connections>
@@ -1714,37 +1783,40 @@
                                 <rect key="frame" x="251" y="80" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Away"/>
+                                <connections>
+                                    <segue destination="PtY-nq-KUh" kind="show" identifier="ViewAwayTeam" id="zNm-b5-10M"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ku-7Y-9U6">
-                                <rect key="frame" x="44" y="253" width="100" height="60"/>
+                                <rect key="frame" x="70" y="253" width="104" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="50/50"/>
+                                <state key="normal" backgroundImage="50"/>
                                 <connections>
                                     <segue destination="jUb-UE-G7L" kind="show" identifier="5050" id="zQ3-DJ-dHg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8XW-Hc-V2Q">
-                                <rect key="frame" x="38" y="353" width="100" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Bingo"/>
-                                <connections>
-                                    <segue destination="gob-sP-SI7" kind="show" identifier="Bingo" id="Rwt-ZG-50V"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndF-CA-zIy">
-                                <rect key="frame" x="192" y="353" width="100" height="60"/>
+                                <rect key="frame" x="219" y="354" width="103" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Predictor"/>
+                                <state key="normal" backgroundImage="PredictorButton"/>
                                 <connections>
                                     <segue destination="9ss-eO-BA6" kind="show" identifier="Predictor" id="gk2-wB-LNv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYU-Cu-p6j">
-                                <rect key="frame" x="192" y="253" width="100" height="60"/>
+                                <rect key="frame" x="219" y="253" width="100" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="SOHB"/>
+                                <state key="normal" backgroundImage="SHOHB"/>
                                 <connections>
                                     <segue destination="qmK-oL-Xqr" kind="show" identifier="SOHB" id="SSR-bm-blv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8XW-Hc-V2Q">
+                                <rect key="frame" x="74" y="353" width="100" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="BingoButton"/>
+                                <connections>
+                                    <segue destination="gob-sP-SI7" kind="show" identifier="Bingo" id="Rwt-ZG-50V"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1766,7 +1838,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cGK-Dz-Ybb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3839" y="1156"/>
+            <point key="canvasLocation" x="3837.5999999999999" y="1155.472263868066"/>
         </scene>
         <!--Bingo-->
         <scene sceneID="na6-6N-M5N">
@@ -2348,10 +2420,22 @@
         </scene>
     </scenes>
     <resources>
+        <image name="50" width="500" height="250"/>
+        <image name="BingoButton" width="500" height="250"/>
+        <image name="FixturesButton" width="500" height="250"/>
+        <image name="GamesButton" width="500" height="250"/>
         <image name="LoginButton" width="400" height="60"/>
+        <image name="Period1Button" width="309" height="153"/>
+        <image name="Period2Button" width="309" height="153"/>
+        <image name="Period3Button" width="309" height="153"/>
+        <image name="PredictorButton" width="500" height="250"/>
+        <image name="SHOHB" width="500" height="250"/>
         <image name="TextField" width="400" height="60"/>
+        <image name="TicketsButton" width="500" height="250"/>
+        <image name="teamsButton" width="500" height="250"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="zNm-b5-10M"/>
         <segue reference="0ra-xe-oyb"/>
     </inferredMetricsTieBreakers>
 </document>

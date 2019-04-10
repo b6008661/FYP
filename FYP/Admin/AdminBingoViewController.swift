@@ -28,11 +28,59 @@ class AdminBingoViewController: UIViewController, UITableViewDataSource, UITable
         
         let bingoEvent = bingoEvents[indexPath.row]
         cell.eventLbl.text = bingoEvent.type
+        if(bingoEvent.selected == true) {
+            cell.eventLbl.textColor = UIColor.red;
+        }
         
         return cell
     }
     
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "BingoEventTableViewCell", for: indexPath) as! BingoEventTableViewCell
+//        cell.eventLbl.textColor = UIColor.red;
+        
+        //search through database
+        //set this bingoEvent selected to true
+        
+        //getting the index path of selected row
+        let indexPath = tableView.indexPathForSelectedRow
+        
+        //getting the current cell from the index path
+        let currentCell = tableView.cellForRow(at: indexPath!)! as! BingoEventTableViewCell
+        //getting the text of that cell
+        let currentItem = currentCell.eventLbl.text
+        let bingoEvent = bingoEvents[(indexPath?.row)!]
+        let alertController = UIAlertController(title: "Bingo event selected!", message: "You Selected " + currentItem! , preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "Close Alert", style: .default, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        present(alertController, animated: true, completion: nil)
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "BingoEvent")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject] {
+                if(data.value(forKey: "id") as? String == bingoEvent.id) {
+                    data.setValue(true, forKey: "selected")
+                }
+                do {
+                    try context.save()
+                } catch {
+                    print("Failed saving")
+                }
+            }
+            
+        } catch {
+            
+            print("Failed")
+        }
+        
+        currentCell.eventLbl.textColor = UIColor.red
+        
+    }
     
 //    private func loadGameEvents() {
 //        let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -66,7 +114,7 @@ class AdminBingoViewController: UIViewController, UITableViewDataSource, UITable
         do {
             let result = try context.fetch(request)
             for data in result as! [NSManagedObject] {
-                let bingoEvent = BingoEventItem(type: data.value(forKey: "type") as! String, player: data.value(forKey: "player") as! String, period: data.value(forKey: "period") as! String, id: data.value(forKey: "id") as! String, fixtureID: data.value(forKey: "fixtureID") as! String)
+                let bingoEvent = BingoEventItem(type: data.value(forKey: "type") as! String, player: data.value(forKey: "player") as! String, period: data.value(forKey: "period") as! String, id: data.value(forKey: "id") as! String, fixtureID: data.value(forKey: "fixtureID") as! String, selected: data.value(forKey: "selected") as! Bool)
                 print(bingoEvent.type)
                 bingoEvents += [bingoEvent]
             }
@@ -116,6 +164,7 @@ class AdminBingoViewController: UIViewController, UITableViewDataSource, UITable
             newBingoEvent.setValue("1", forKey: "id")
             //fixture id
             newBingoEvent.setValue(fixture?.id, forKey:"fixtureID")
+            newBingoEvent.setValue(false, forKey: "selected")
             do {
                 try context.save()
             } catch {
