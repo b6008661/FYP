@@ -37,7 +37,7 @@ class WalletViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     if data.value(forKey: "fixtureID") as? String == fixture?.id {
                         print("FixtureID: ", data.value(forKey: "fixtureID") as? String ?? "")
                         print("ID: ", data.value(forKey: "id") as? String ?? "")
-                        let ticket = Ticket50Item(id: data.value(forKey: "id") as! String, owner: data.value(forKey: "owner") as! String, fixtureID: data.value(forKey: "fixtureID") as! String)
+                        let ticket = Ticket50Item(id: data.value(forKey: "id") as! String, owner: data.value(forKey: "owner") as! String, fixtureID: data.value(forKey: "fixtureID") as! String, won: (data.value(forKey: "won") != nil))
                         tickets50 += [ticket]
                     }
                 }

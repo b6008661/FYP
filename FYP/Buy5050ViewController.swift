@@ -49,7 +49,7 @@ class Buy5050ViewController: UIViewController {
         }
         
         for num in 1 ..< quantity+1 {
-            print("Num: ", num)
+//            print("Num: ", num)
             var count = 0
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let context = appDelegate.persistentContainer.viewContext
@@ -60,14 +60,14 @@ class Buy5050ViewController: UIViewController {
                 for data in result as! [NSManagedObject] {
                     if data.value(forKey: "owner") as? String == currentUser?.id && data.value(forKey: "fixtureID")as? String == fixture?.id {
                         count = count + 1
-                        print("Count: ", count)
+//                        print("Count: ", count)
                     }
                 }
             } catch {
                 print("Failed")
             }
             count = count + 1
-            print("Final count: ", count)
+//            print("Final count: ", count)
             let owner = (currentUser?.id)
             let fixtureID = (fixture?.id)
             let entity = NSEntityDescription.entity(forEntityName: "Ticket50", in: context)
@@ -75,6 +75,7 @@ class Buy5050ViewController: UIViewController {
             newTicket.setValue(String(count), forKey: "id")
             newTicket.setValue(owner, forKey: "owner")
             newTicket.setValue(fixtureID, forKey: "fixtureID")
+            newTicket.setValue(true, forKey: "won")
             do {
                 try context.save()
             } catch {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11027903225E492C006BC071 /* BingoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11027902225E492C006BC071 /* BingoTableViewCell.swift */; };
 		112A24CF2236B1B20015E6B7 /* ViewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A24CE2236B1B20015E6B7 /* ViewEventViewController.swift */; };
 		11582855224ACA2A00363D93 /* Buy5050ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11582854224ACA2A00363D93 /* Buy5050ViewController.swift */; };
 		11582857224AD2D900363D93 /* UserItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11582856224AD2D900363D93 /* UserItem.swift */; };
@@ -31,7 +32,6 @@
 		115DCB2C222AC86F003EE7A4 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB2B222AC86F003EE7A4 /* PlayerTableViewCell.swift */; };
 		115DCB2E222ADC3A003EE7A4 /* BingoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB2D222ADC3A003EE7A4 /* BingoViewController.swift */; };
 		115DCB30222ADD17003EE7A4 /* BingoEventItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB2F222ADD17003EE7A4 /* BingoEventItem.swift */; };
-		115DCB34222ADEF8003EE7A4 /* BingoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCB33222ADEF8003EE7A4 /* BingoCollectionViewCell.swift */; };
 		1165DC30223011FB003D5F6B /* TeamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1165DC2F223011FB003D5F6B /* TeamsTableViewController.swift */; };
 		1165DC322230120F003D5F6B /* TeamItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1165DC312230120F003D5F6B /* TeamItem.swift */; };
 		1165DC3422303764003D5F6B /* AddFixtureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1165DC3322303764003D5F6B /* AddFixtureViewController.swift */; };
@@ -51,6 +51,7 @@
 		11856DA42243B94300A13A59 /* PredictorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11856DA32243B94300A13A59 /* PredictorViewController.swift */; };
 		11AB8FBB223007F00043E6F4 /* AdminFixturesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AB8FBA223007F00043E6F4 /* AdminFixturesTableViewController.swift */; };
 		11AB8FBF22300C5D0043E6F4 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AB8FBE22300C5D0043E6F4 /* TeamTableViewCell.swift */; };
+		11B419AE225F2F120092035D /* PenaltyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B419AD225F2F120092035D /* PenaltyItem.swift */; };
 		11E7AA0F22477FAA00AE14EB /* BingoEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E7AA0E22477FAA00AE14EB /* BingoEventTableViewCell.swift */; };
 		11E7AA11224A1C6200AE14EB /* AdminPlayersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E7AA10224A1C6200AE14EB /* AdminPlayersTableViewController.swift */; };
 		11E7AA13224A242100AE14EB /* AddPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E7AA12224A242100AE14EB /* AddPlayerViewController.swift */; };
@@ -78,6 +79,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11027902225E492C006BC071 /* BingoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoTableViewCell.swift; sourceTree = "<group>"; };
 		112A24CE2236B1B20015E6B7 /* ViewEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewEventViewController.swift; sourceTree = "<group>"; };
 		11582854224ACA2A00363D93 /* Buy5050ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buy5050ViewController.swift; sourceTree = "<group>"; };
 		11582856224AD2D900363D93 /* UserItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserItem.swift; sourceTree = "<group>"; };
@@ -108,7 +110,6 @@
 		115DCB2B222AC86F003EE7A4 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 		115DCB2D222ADC3A003EE7A4 /* BingoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoViewController.swift; sourceTree = "<group>"; };
 		115DCB2F222ADD17003EE7A4 /* BingoEventItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoEventItem.swift; sourceTree = "<group>"; };
-		115DCB33222ADEF8003EE7A4 /* BingoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoCollectionViewCell.swift; sourceTree = "<group>"; };
 		1165DC2F223011FB003D5F6B /* TeamsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewController.swift; sourceTree = "<group>"; };
 		1165DC312230120F003D5F6B /* TeamItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamItem.swift; sourceTree = "<group>"; };
 		1165DC3322303764003D5F6B /* AddFixtureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFixtureViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +130,7 @@
 		11AB8FB7222F06E00043E6F4 /* FYP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FYP.entitlements; sourceTree = "<group>"; };
 		11AB8FBA223007F00043E6F4 /* AdminFixturesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminFixturesTableViewController.swift; sourceTree = "<group>"; };
 		11AB8FBE22300C5D0043E6F4 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
+		11B419AD225F2F120092035D /* PenaltyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenaltyItem.swift; sourceTree = "<group>"; };
 		11E7AA0E22477FAA00AE14EB /* BingoEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoEventTableViewCell.swift; sourceTree = "<group>"; };
 		11E7AA10224A1C6200AE14EB /* AdminPlayersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPlayersTableViewController.swift; sourceTree = "<group>"; };
 		11E7AA12224A242100AE14EB /* AddPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerViewController.swift; sourceTree = "<group>"; };
@@ -202,7 +204,6 @@
 				115DCB23222AAAE3003EE7A4 /* EventViewController.swift */,
 				115DCB27222AC4B6003EE7A4 /* PlayersTableViewController.swift */,
 				115DCB2D222ADC3A003EE7A4 /* BingoViewController.swift */,
-				115DCB33222ADEF8003EE7A4 /* BingoCollectionViewCell.swift */,
 				116902C9223576770062D92B /* ViewPlayerViewController.swift */,
 				11856DA32243B94300A13A59 /* PredictorViewController.swift */,
 				11582854224ACA2A00363D93 /* Buy5050ViewController.swift */,
@@ -241,6 +242,7 @@
 				1165DC3E22352029003D5F6B /* Ticket50Item.swift */,
 				11582856224AD2D900363D93 /* UserItem.swift */,
 				115A0FBA224BF35600560B9A /* TicketSOHBItem.swift */,
+				11B419AD225F2F120092035D /* PenaltyItem.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -256,6 +258,7 @@
 				11E7AA1A224A373900AE14EB /* TicketTableViewCell.swift */,
 				115A0FB8224BF06A00560B9A /* WalletTableViewCell.swift */,
 				11754CED224D09A400EA0D9D /* WalletSOHBTableViewCell.swift */,
+				11027902225E492C006BC071 /* BingoTableViewCell.swift */,
 			);
 			path = "Table Cells";
 			sourceTree = "<group>";
@@ -421,7 +424,6 @@
 			files = (
 				11754CEE224D09A400EA0D9D /* WalletSOHBTableViewCell.swift in Sources */,
 				11E7AA0F22477FAA00AE14EB /* BingoEventTableViewCell.swift in Sources */,
-				115DCB34222ADEF8003EE7A4 /* BingoCollectionViewCell.swift in Sources */,
 				1165DC45223555DE003D5F6B /* AddGoalViewController.swift in Sources */,
 				11E7AA19224A372300AE14EB /* ViewSOHBTableViewController.swift in Sources */,
 				115DCB2E222ADC3A003EE7A4 /* BingoViewController.swift in Sources */,
@@ -429,6 +431,7 @@
 				116902CA223576770062D92B /* ViewPlayerViewController.swift in Sources */,
 				11856DA02242B30200A13A59 /* AdminBingoViewController.swift in Sources */,
 				1165DC30223011FB003D5F6B /* TeamsTableViewController.swift in Sources */,
+				11B419AE225F2F120092035D /* PenaltyItem.swift in Sources */,
 				1165DC322230120F003D5F6B /* TeamItem.swift in Sources */,
 				115DCB2C222AC86F003EE7A4 /* PlayerTableViewCell.swift in Sources */,
 				115DCAE9222A8E72003EE7A4 /* ViewController.swift in Sources */,
@@ -461,6 +464,7 @@
 				11AB8FBB223007F00043E6F4 /* AdminFixturesTableViewController.swift in Sources */,
 				115DCB28222AC4B6003EE7A4 /* PlayersTableViewController.swift in Sources */,
 				115DCB1C222A916B003EE7A4 /* FixtureItem.swift in Sources */,
+				11027903225E492C006BC071 /* BingoTableViewCell.swift in Sources */,
 				115DCB1A222A906C003EE7A4 /* HomeTableViewController.swift in Sources */,
 				115DCB22222AA139003EE7A4 /* EventItem.swift in Sources */,
 				1165DC4322354F04003D5F6B /* AddPenaltyViewController.swift in Sources */,

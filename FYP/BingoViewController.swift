@@ -9,12 +9,37 @@
 import UIKit
 import CoreData
 
-class BingoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class BingoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return gameEvents.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BingoTableViewCell", for: indexPath) as! BingoTableViewCell
+        
+        let gameEvent = gameEvents[indexPath.row]
+        
+        cell.eventLbl.text = gameEvent.type + " by " + gameEvent.player + " during period(s) " + gameEvent.period
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //getting the index path of selected row
+        let indexPath = tableView.indexPathForSelectedRow
+        
+        //getting the current cell from the index path
+        let currentCell = tableView.cellForRow(at: indexPath!)! as! BingoTableViewCell
+       
+        currentCell.backgroundColor = UIColor.lightGray
+        
+        
+    }
+    
     
     var fixture: FixtureItem? = nil
     var currentUser: UserItem?
     var gameEvents: [BingoEventItem] = []
-    @IBOutlet weak var collectionView: UICollectionView!
     
     private func loadGameEvents() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -39,28 +64,11 @@ class BingoViewController: UIViewController, UICollectionViewDelegate, UICollect
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return gameEvents.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BingoCollectionViewCell", for: indexPath) as! BingoCollectionViewCell
-        
-        let gameEvent = gameEvents[indexPath.row]
-        
-        cell.textArea.text = gameEvent.type + " by " + gameEvent.player + " during period(s) " + gameEvent.period
-        
-        return cell
-        
-    }
-    
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.dataSource = self
-        collectionView.delegate = self
+//        tableView.dataSource = self
+//        tableView.delegate = self
         //loadGameEvents()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
@@ -97,4 +105,9 @@ class BingoViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     */
 
+    @IBAction func submit(_ sender: UIButton) {
+        //loop through all cells in table
+        //if a cell is selected, store as a users bingo card
+        
+    }
 }

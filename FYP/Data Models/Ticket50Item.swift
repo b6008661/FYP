@@ -12,10 +12,12 @@ class Ticket50Item {
     var id: String
     var owner: String
     var fixtureID: String
+    var won: Bool
     
-    init(id: String, owner: String, fixtureID: String) {
+    init(id: String, owner: String, fixtureID: String, won: Bool) {
         self.id = id
         self.owner = owner
         self.fixtureID = fixtureID
+        self.won = won
     }
 }

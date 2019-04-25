@@ -10,23 +10,67 @@ import UIKit
 import os.log
 import CoreData
 
-class AddFixtureViewController: UIViewController {
+class AddFixtureViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return teams.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return teams[row].name
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView.tag == 1 {
+            homeTeamInput.text = teams[row].name
+        } else {
+            awayTeamInput.text = teams[row].name
+        }
+    }
     
     var fixture: FixtureItem? = nil
-    
+    var teams: [TeamItem] = []
     @IBOutlet weak var homeTeamInput: UITextField!
     @IBOutlet weak var awayTeamInput: UITextField!
     @IBOutlet weak var dateInput: UITextField!
     @IBOutlet weak var timeInput: UITextField!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
+    
     @IBAction func cancel(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let homePickerView = UIPickerView()
+        homePickerView.tag = 1
+        let awayPickerView = UIPickerView()
+        awayPickerView.tag = 2
+        homeTeamInput.inputView = homePickerView
+        awayTeamInput.inputView = awayPickerView
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Team")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject] {
+                let team = TeamItem(name: data.value(forKey: "name") as! String)
+                teams += [team]
+            }
+            
+        } catch {
+            
+            print("Failed")
+        }
+        
+        homePickerView.delegate = self
+        awayPickerView.delegate = self
+        
     }
     
 

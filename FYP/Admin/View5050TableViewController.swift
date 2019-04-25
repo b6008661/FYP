@@ -14,6 +14,19 @@ class View5050TableViewController: UITableViewController {
     var tickets: [Ticket50Item] = []
     var fixture: FixtureItem?
     
+    @IBOutlet weak var selectWinner: UIBarButtonItem!
+    @IBAction func selectWinner(_ sender: UIBarButtonItem) {
+        //randomly choose a table view cell
+        let randomTicket = tickets.randomElement()
+        print(randomTicket?.id ?? "")
+        
+        
+        //remove all other cells from the table view by setting won to false
+        //only display winning ticket 
+        
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -27,8 +40,10 @@ class View5050TableViewController: UITableViewController {
                     print("FixtureID: ", data.value(forKey: "fixtureID") as? String ?? "")
                     print("ID: ", data.value(forKey: "id") as? String ?? "")
                     print("Owner: ", data.value(forKey: "owner") as? String ?? "")
-                    let ticket = Ticket50Item(id: data.value(forKey: "id") as! String, owner: data.value(forKey: "owner") as! String, fixtureID: data.value(forKey: "fixtureID") as! String)
+                    if (data.value(forKey: "won") != nil && true) {
+                    let ticket = Ticket50Item(id: data.value(forKey: "id") as! String, owner: data.value(forKey: "owner") as! String, fixtureID: data.value(forKey: "fixtureID") as! String, won: (data.value(forKey: "won") != nil))
                     tickets += [ticket]
+                    }
                 }
             }
             
